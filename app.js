@@ -15,3 +15,7 @@ printMessage("John", 1000, 2000000);
 var request = https.get("https://sampletestdata.herokuapp.com/js/" + username + ".json", function(response) {
     console.log(response.statusCode);
 });
+
+request.on("error", function(error) {
+   console.error(error.message);
+});
